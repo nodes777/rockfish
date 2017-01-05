@@ -1,0 +1,42 @@
+*{
+}
+.text-center{
+	text-align: center;
+}
+.img-center{
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.animalImage{
+	margin: 10px;
+}
+.animalName{
+	text-align: center;
+}
+.boxShadow{
+	border-radius: 5px;
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+.streak{
+	margin-left: 50px;
+}
+.ng-hide-add, .ng-hide-remove {
+    /* ensure visibility during the transition */
+    display: block !important; /* yes, important */
+}
+.cssSlideUp {
+	-webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.cssSlideUp.showy{
+	opacity: 1;
+}
+.cssSlideUp.hidey{
+	opacity: 0;
+}
