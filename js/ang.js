@@ -48,7 +48,7 @@ angular.module("root", [])
             console.log("Guess: "+ guess+"\n");
             console.log("Answer: "+ answer+"\n");
 
-            if(guess === answer){
+            if((guess === answer) || (guess === alts)){
             	guessIsCorrect();
             } else {
             	guessIsWrong();
