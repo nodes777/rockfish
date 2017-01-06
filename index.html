@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="root">
   <head>
+  <title>Rockfish App</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script id="__bs_script__">//<![CDATA[
@@ -18,10 +19,14 @@
       <div ng-controller="index">
         <div class="col-md-12">
           <div class ="animalImage"><img class="img-center" ng-src="{{img}}"></div>
+          <div class="text-center">{{name}}</div>
         </div>
         <div class="row">
-          <div class="text-center"><input type="text" ng-model="guess" /></div>
-            <div class="text-center">{{guess}}</div>
+          <div class="text-center">
+            <form ng-submit="compare(guess)" >
+               <input type="text" ng-model="guess" />
+            </form>
+          </div>
         </div>
       </div>
     </div>
