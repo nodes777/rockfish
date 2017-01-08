@@ -35,7 +35,7 @@ let animals = [
     },
     {
         name: "Gopher Rockfish",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/China_rockfish_in_Neah_Bay_August_2009_JLL.jpg/250px-China_rockfish_in_Neah_Bay_August_2009_JLL.jpg",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Gopher_rockfish.jpg/250px-Gopher_rockfish.jpg",
         alts: "Gopher",
         description: "Gophers are extremely closely related to the black-and-yellow rockfish S. chrysomelas; S. chrysomelas is darker brown with yellow patches, and tends to prefer shallower water. While it was once thought that the black-and-yellow and gopher rockfish were merely color morphs of the same species, detailed genomic studies using microsatellite analysis have recently shown, however, that there is a significant amount of genetic difference between the two at loci that code for more than just coloration. This implies that they are indeed distinct, albeit closely related species, making them ideal specimens for studying sympatric evolution."
     },
@@ -43,12 +43,18 @@ let animals = [
         name: "Kelp Rockfish",
         img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Sebastes_atrovirens.jpg/220px-Sebastes_atrovirens.jpg",
         alts: "Kelp",
-        description : "This rockfish is an important prey item for many other animals. The larva is consumed by siphonophores and chaetognaths. The juvenile is food for other fish, such as lingcod, cabezon, and salmon, as well as many birds, pinnipeds, and porpoises. The adult is prey for sharks, dolphins, and seals. Additionally, this species is taken in spearfishing and angling"
+        description : "This rockfish is an important prey item for many other animals. The larva is consumed by siphonophores and chaetognaths. The juvenile is food for other fish, such as lingcod, cabezon, and salmon, as well as many birds, pinnipeds, and porpoises. The adult is prey for sharks, dolphins, and seals. Additionally, this species is taken in spearfishing and angling."
     },
     {
         name: "Copper Rockfish",
         img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Sebastes_caurinus_1.jpg/220px-Sebastes_caurinus_1.jpg",
         alts: "Copper",
-        description : "This rockfish is known to be very faithful to its chosen home and numerous tagging studies have shown that these rockfish travel no more than a mile from their chosen location"
+        description : "This rockfish is known to be very faithful to its chosen home and numerous tagging studies have shown that these rockfish travel no more than a mile from their chosen location."
+    },
+    {
+        name: "Bocaccio Rockfish",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Sebastes_paucispinis.jpg/220px-Sebastes_paucispinis.jpg",
+        alts: "Bocaccio",
+        description : "The southern distinct population segment of bocaccio is a U.S. National Marine Fisheries Service Species of Concern. National Marine Fisheries Service listed the Puget Sound/Georgia basin distinct population segment as endangered on April 28, 2010. Critical habitat was designated on November 13, 2014."
     },
 ];

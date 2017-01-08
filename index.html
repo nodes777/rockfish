@@ -9,14 +9,13 @@
     <div class="row">
       <div class="text-center">
         <h1>What's That Rockfish???</h1>
-        {{message}}
       </div>
     </div>
     <div class="row">
       <div ng-controller="index">
         <div class="col-md-12">
-          <div class ="animalImage"><img class="img-center" ng-src="{{img}}"></div>
-          <div class="text-center">{{name}}</div>
+          <div class ="animalImage"><img class="img-center boxShadow" ng-src="{{img}}"></div>
+          <!--<div class="text-center">{{name}}</div>-->
         </div>
         <div class="row">
           <div class="text-center">
@@ -25,9 +24,16 @@
             </form>
           </div>
         </div>
+        <div class="row">
+          <div ng-show="slide" class="text-center description col-md-8 col-md-offset-2">{{description}}</div>
+        </div>
+        <div class="row">
+          <button type="button" ng-show="slide" class="ng-hide img-center btn btn-success " ng-click="changeAnimal()"> Cool!</button>
+        </div>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-animate.min.js"></script>
     <script src="js/animals.js"></script>
   <script src="js/ang.js"></script>
 </html>

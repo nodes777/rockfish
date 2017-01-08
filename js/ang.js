@@ -1,10 +1,12 @@
-angular.module("root", [])
+/*jshint esversion: 6 */
+angular.module('root', ['ngAnimate'])
     .controller("index", ["$scope", function($scope){
 
     	/*variables*/
         let animalPool = [];
         let currentAnimal = {};
-        $scope.guess;
+        $scope.guess = '';
+        $scope.description = '';
 
         /*init*/
         createPool();
@@ -18,22 +20,32 @@ angular.module("root", [])
             if (animalPool.length > 0) {
 	            let randNum = Math.floor(Math.random() * animalPool.length);
 	            currentAnimal = new Animal(animalPool[randNum]);
-	            animalPool.splice(randNum, 1)
+	            animalPool.splice(randNum, 1);
         	} else {
-        		console.log("I'm out of rockfish!")
+        		console.log("I'm out of rockfish!");
         	}
-        };
+        }
 
         function setAnimal() {
         	$scope.name = currentAnimal.name;
             $scope.img = currentAnimal.img;
+            $scope.description = currentAnimal.description;
         }
+
+        $scope.changeAnimal = function() {
+        	$scope.slide = false;
+        	getAnimal();
+        	setAnimal();
+        	$scope.guess= '';
+        };
 
         function Animal(data) {
             this.name = data.name;
             this.img = data.img;
             this.alts = data.alts;
-        };
+            this.description = data.description;
+        }
+
         function createPool () {
             /*From the animal service*/
             animals.forEach(function(animalData) {
@@ -53,15 +65,12 @@ angular.module("root", [])
             } else {
             	guessIsWrong();
             }
-        }
+        };
 
         function guessIsCorrect() {
         	console.log("Correct!");
-        	getAnimal();
-        	setAnimal();
-        	$scope.guess= '';
-        	console.log(currentAnimal);
-        	console.log($scope.img);
+        	$scope.slide = true;
+
         }
 
         function guessIsWrong() {
@@ -69,4 +78,6 @@ angular.module("root", [])
         	$scope.guess= '';
         }
 
-    }])
+
+
+    }]);
