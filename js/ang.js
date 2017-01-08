@@ -1,12 +1,13 @@
 /*jshint esversion: 6 */
 angular.module('root', ['ngAnimate'])
-    .controller("index", ["$scope", function($scope){
+    .controller("index", ["$scope", "$timeout", function($scope, $timeout){
 
     	/*variables*/
         let animalPool = [];
         let currentAnimal = {};
         $scope.guess = '';
         $scope.description = '';
+        $scope.error = false;
 
         /*init*/
         createPool();
@@ -76,8 +77,12 @@ angular.module('root', ['ngAnimate'])
         function guessIsWrong() {
         	console.log("Wrong answer man");
         	$scope.guess= '';
+        	shakeImage();
         }
 
-
+        function shakeImage() {
+        	$scope.error = true;
+        	$timeout(function() {$scope.error = false; }, 500);
+        }
 
     }]);
