@@ -6,11 +6,11 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-      <h1 class="text-center" >What's That Rockfish???</h1>
       <div ng-controller="index">
+      <h1 class="text-center">{{heading}}</h1>
           <img class="img-center boxShadow animalImage" ng-class="{'shake':error}" ng-src="{{img}}">
           <div class="text-center">
-            <form ng-submit="compare(guess)" >
+            <form ng-hide="slide" ng-submit="compare(guess)" >
                <input type="text" ng-model="guess" />
             </form>
           </div>

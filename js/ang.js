@@ -9,6 +9,7 @@ angular.module('root', ['ngAnimate'])
         $scope.guess = '';
         $scope.description = '';
         $scope.error = false;
+        $scope.heading = "What's that Rockfish???";
 
         /*init*/
         createPool();
@@ -25,6 +26,8 @@ angular.module('root', ['ngAnimate'])
 	            animalPool.splice(randNum, 1);
         	} else {
         		console.log("I'm out of rockfish!");
+        		$scope.heading = "I'm out of rockfish!";
+
         	}
         }
 
