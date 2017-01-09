@@ -5,6 +5,7 @@ angular.module('root', ['ngAnimate'])
     	/*variables*/
         let animalPool = [];
         let currentAnimal = {};
+        let wrongTries = 0;
         $scope.guess = '';
         $scope.description = '';
         $scope.error = false;
@@ -75,9 +76,13 @@ angular.module('root', ['ngAnimate'])
         }
 
         function guessIsWrong() {
-        	console.log("Wrong answer man");
         	$scope.guess= '';
         	shakeImage();
+        	wrongTries++;
+        	if (wrongTries>2) {
+        		$scope.slide = true;
+        		wrongTries = 0;
+        	}
         }
 
         function shakeImage() {
