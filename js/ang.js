@@ -32,8 +32,9 @@ angular.module('root', ['ngAnimate'])
         }
 
         function setAnimal() {
+        	let randNum = Math.floor(Math.random() * currentAnimal.img.length);
         	$scope.name = currentAnimal.name;
-            $scope.img = currentAnimal.img;
+            $scope.img = currentAnimal.img[randNum];
             $scope.description = currentAnimal.description;
         }
 
@@ -42,6 +43,8 @@ angular.module('root', ['ngAnimate'])
         	getAnimal();
         	setAnimal();
         	$scope.guess= '';
+        	document.getElementById("btn").blur();
+        	document.getElementById("textField").focus();
         };
 
         function Animal(data) {
@@ -59,23 +62,36 @@ angular.module('root', ['ngAnimate'])
         }
 
         $scope.compare = function(guess) {
+        	let answer;
             guess = guess.replace(/\s/g, '').toLowerCase();
-            answer = $scope.name.replace(/\s/g, '').toLowerCase();
-            let alts = currentAnimal.alts.toLowerCase();
-            console.log("Guess: "+ guess+"\n");
-            console.log("Answer: "+ answer+"\n");
+            let answers = [];
+            answers.push($scope.name.replace(/\s/g, '').toLowerCase());
 
-            if((guess === answer) || (guess === alts)){
-            	guessIsCorrect();
-            } else {
-            	guessIsWrong();
-            }
+            currentAnimal.alts.forEach(function(alt){
+            	answers.push(alt.toLowerCase().replace(/\s/g, ''));
+            });
+            console.log(answers);
+            console.log("Guess: "+ guess+"\n");
+            console.log("Answer: "+ answers+"\n");
+
+            for(let x = 0; x<=answers.length; x++){
+            	if (guess === answers[x]) {
+			            guessIsCorrect();
+			        }
+			    if(x === answers.length){
+			    	guessIsWrong();
+			    }
+            	}
+
+
         };
 
         function guessIsCorrect() {
         	console.log("Correct!");
+        	/*slide = true just slides the description out*/
+        	/*changeAnimal is an ng-click on the button that changes the animal*/
         	$scope.slide = true;
-
+        	document.getElementById("btn").focus();
         }
 
         function guessIsWrong() {
@@ -84,6 +100,7 @@ angular.module('root', ['ngAnimate'])
         	wrongTries++;
         	if (wrongTries>2) {
         		$scope.slide = true;
+        		document.getElementById("btn").focus();
         		wrongTries = 0;
         	}
         }

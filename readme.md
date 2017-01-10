@@ -7,6 +7,8 @@ I work at the [Aquarium of the Bay][http://aquariumofthebay.org/] and there are 
 * Add messaging for 3 tries
 * Add more rockfish
 * Use an AJAX call to get info from Wikipedia
+* Add autofocus on button once describ pops up
+* Add point system
 
 
 
