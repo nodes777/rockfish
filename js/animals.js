@@ -1,4 +1,4 @@
-let animals = [
+var animals = [
     {
         name: "Blue Rockfish",
         img: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Sebastes_mystinus_2.jpg/220px-Sebastes_mystinus_2.jpg",],

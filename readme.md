@@ -11,4 +11,7 @@ I work at the [Aquarium of the Bay][http://aquariumofthebay.org/] and there are 
 * Add point system
 
 
+##Bugs##
+* Angular does not render on iPhone
+
 
