@@ -74,13 +74,25 @@ input:focus {
   background-color: #fcff66;
 }
 
-form.ng-hide-add  { animation:0.5s flipOutX ease;  }
+form.ng-hide-add  {
+    animation: flipOutX 0.5s ease;
+    -webkit-animation: flipOutX 0.5s ease;
+    -moz-animation: flipOutX 0.5s ease;
+ }
 
 /* when hiding the picture */
-.ng-hide-add         { animation: 0.5s lightSpeedOut ease; }
+.ng-hide-add         {
+    animation: lightSpeedOut 0.5s ease;
+    -webkit-animation: lightSpeedOut 0.5s ease;
+    -moz-animation: lightSpeedOut 0.5s ease;
+}
 
 /* when showing the picture */
-.ng-hide-remove      { animation:0.5s flipInX ease; }
+.ng-hide-remove      {
+    animation: flipInX 0.5s ease;
+    -webkit-animation: flipInX 0.5s ease;
+    -moz-animation: flipInX 0.5s ease;
+     }
 
 /* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
 /* flip in */
@@ -159,6 +171,7 @@ form.ng-hide-add  { animation:0.5s flipOutX ease;  }
   animation-name: flipInX;
 }
 
+/*Flip out X*/
 @-webkit-keyframes flipOutX {
   from {
     -webkit-transform: perspective(400px);
@@ -205,7 +218,7 @@ form.ng-hide-add  { animation:0.5s flipOutX ease;  }
 }
 
 
-/* light speed out */
+/* Light Speed Out */
 @-webkit-keyframes lightSpeedOut {
   from {
     opacity: 1;
