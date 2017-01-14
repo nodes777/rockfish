@@ -14,21 +14,19 @@
   </head>
   <body>
       <div ng-controller="index">
-      <h1 class="text-center">{{heading}}</h1>
-          <img id ="img" class="img-center boxShadow animalImage" ng-class="{'shake':error}" ng-src="{{img}}">
+        <h1 class="text-center">{{heading}}</h1>
+        <img id ="img" class="img-center boxShadow animalImage" ng-class="{'shake':error}" ng-src="{{img}}">
           <div class="text-center">
             <form ng-hide="slide" ng-submit="compare(guess)" >
                <input id="textField" type="text" ng-model="guess" />
             </form>
           </div>
-          <p class="text-center" ng-show="slide">{{name}}</p>
-          <p ng-show="slide" class="text-center description col-md-8 col-md-offset-2">{{description}}</p>
-        
-            <button type="button" id="btn" ng-show="slide" class="ng-hide center-me img-center btn btn-success btn-lg " ng-click="changeAnimal()"> Cool! Show Me Another!</button>
-          
+        <p class="text-center" ng-show="slide">{{name}}</p>
+        <p ng-show="slide" class="text-center description col-md-8 col-md-offset-2">{{description}}</p>
+        <button type="button" id="btn" ng-show="slide" class="ng-hide center-me img-center btn btn-success btn-lg " ng-click="changeAnimal()"> Cool! Show Me Another!</button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
     <script src="js/animals.js"></script>
     <script src="js/ang.js"></script>
   </body>
