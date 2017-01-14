@@ -44,8 +44,8 @@ angular.module('root', ['ngAnimate'])
             getAnimal();
             setAnimal();
             $scope.guess = '';
-            document.getElementById("btn").blur();
-            document.getElementById("textField").focus();
+            //document.getElementById("btn").blur();
+            //document.getElementById("textField").focus();
         };
 
         function Animal(data) {
@@ -63,7 +63,6 @@ angular.module('root', ['ngAnimate'])
         }
 
         $scope.compare = function(guess) {
-            var answer;
             guess = guess.replace(/\s/g, '').toLowerCase();
             var answers = [];
             answers.push($scope.name.replace(/\s/g, '').toLowerCase());
@@ -71,9 +70,9 @@ angular.module('root', ['ngAnimate'])
             currentAnimal.alts.forEach(function(alt) {
                 answers.push(alt.toLowerCase().replace(/\s/g, ''));
             });
-            console.log(answers);
-            console.log("Guess: " + guess + "\n");
-            console.log("Answer: " + answers + "\n");
+            //console.log(answers);
+            //console.log("Guess: " + guess + "\n");
+            //console.log("Answer: " + answers + "\n");
 
             for (var x = 0; x <= answers.length; x++) {
                 if (guess === answers[x]) {
@@ -91,7 +90,7 @@ angular.module('root', ['ngAnimate'])
             /*slide = true just slides the description out*/
             /*changeAnimal is an ng-click on the button that changes the animal*/
             $scope.slide = true;
-            document.getElementById("btn").focus();
+            //document.getElementById("btn").focus();
         }
 
         function guessIsWrong() {
@@ -100,7 +99,7 @@ angular.module('root', ['ngAnimate'])
             wrongTries++;
             if (wrongTries > 2) {
                 $scope.slide = true;
-                document.getElementById("btn").focus();
+                //document.getElementById("btn").focus();
                 wrongTries = 0;
             }
         }

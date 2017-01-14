@@ -1,7 +1,7 @@
 * {
-  /* border-style: solid;
+  border-style: solid;
   border-color: red;
-  */
+
 }
 
 h1 {
@@ -25,6 +25,12 @@ body {
  /* IE 10+ */background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
 /* W3C */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
 /* IE6-9 */
+}
+
+.center-me {
+    width: 250px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .text-center{

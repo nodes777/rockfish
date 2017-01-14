@@ -12,6 +12,7 @@ I work at the [Aquarium of the Bay][http://aquariumofthebay.org/] and there are 
 
 
 ##Bugs##
-* Angular does not render on iPhone
+* Mobile sizing and focus needs work
+* The image shakes everytime, even if you answer correctly
 
 
