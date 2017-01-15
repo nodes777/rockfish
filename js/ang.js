@@ -76,10 +76,10 @@ angular.module('root', ['ngAnimate'])
 
             for (var x = 0; x <= answers.length; x++) {
                 if (guess === answers[x]) {
-                    guessIsCorrect();
+                    return guessIsCorrect();
                 }
                 if (x === answers.length) {
-                    guessIsWrong();
+                    return guessIsWrong();
                 }
             }
 
@@ -87,6 +87,7 @@ angular.module('root', ['ngAnimate'])
 
         function guessIsCorrect() {
             console.log("Correct!");
+            console.log("Scope.error: " + $scope.error + "\n");
             /*slide = true just slides the description out*/
             /*changeAnimal is an ng-click on the button that changes the animal*/
             $scope.slide = true;
