@@ -45,9 +45,9 @@ body {
     margin-bottom: 10px;
 }
 
-/*.animalImage{
-  width: 260px;
-  height: 170px;
+.animalImage{
+  max-width: 250px;
+  max-height: 190px;
 }
 */
 
